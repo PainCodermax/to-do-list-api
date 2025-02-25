@@ -12,17 +12,6 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-//	@title			Gin-Clean-Template
-//	@version		1.0
-//	@description	Clean Architecture template for Golang Gin services
-//	@contact.name	gelco
-//	@contact.url	https://github.com/alex-guoba/gin-clean-template
-//	@license.name	MIT License
-//	@license.url	https://github.com/alex-guoba/gin-clean-template/blob/main/LICENSE
-//	@host			localhost:8080
-//	@BasePath		/
-//	@schemes		http https
-
 type Server struct {
 	Router *gin.Engine
 	Svr    *http.Server
@@ -63,6 +52,5 @@ func (s *Server) Start() error {
 }
 
 func (s *Server) Shutdown(ctx context.Context) error {
-	// TODO: add code
 	return s.Svr.Shutdown(ctx)
 }
