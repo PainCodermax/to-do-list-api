@@ -12,19 +12,19 @@ var (
 )
 
 type Configuration struct {
-	RunMode               string        `env:"RunMode"`
-	HTTPPort              string        `env:"HTTPPort"`
-	ReadTimeout           time.Duration `env:"ReadTimeout"`
-	WriteTimeout          time.Duration `env:"WriteTimeout"`
-	DefaultPageSize       int           `env:"DefaultPageSize"`
-	MaxPageSize           int           `env:"MaxPageSize"`
-	ServerShutdownTimeout time.Duration `env:"ServerShutdownTimeout"`
-	LogSavePath           string        `env:"LogSavePath"`
-	LogFileName           string        `env:"LogFileName"`
-	MaxSize               int           `env:"MaxSize"`
-	MaxBackups            int           `env:"MaxBackups"`
-	Compress              bool          `env:"Compress"`
-	Level                 string        `env:"Level"`
+	RunMode               string        `env:"RUNMODE"`
+	HTTPPort              string        `env:"HTTPPORT"`
+	ReadTimeout           time.Duration `env:"READTIMEOUT"`
+	WriteTimeout          time.Duration `env:"WRITETIMEOUT"`
+	DefaultPageSize       int           `env:"DEFAULTPAGESIZE"`
+	MaxPageSize           int           `env:"MAXPAGESIZE"`
+	ServerShutdownTimeout time.Duration `env:"SERVERSHUTDOWNTIMEOUT"`
+	LogSavePath           string        `env:"LOGSAVEPATH"`
+	LogFileName           string        `env:"LOGFILENAME"`
+	MaxSize               int           `env:"MAXSIZE"`
+	MaxBackups            int           `env:"MAXBACKUPS"`
+	Compress              bool          `env:"COMPRESS"`
+	Level                 string        `env:"LEVEL"`
 }
 
 func Load(cfgFile string) error {
